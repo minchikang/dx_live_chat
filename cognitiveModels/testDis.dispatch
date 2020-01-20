@@ -1,0 +1,39 @@
+{
+  "authoringRegion": "westus",
+  "hierarchical": true,
+  "useAllTrainingData": false,
+  "dontReviseUtterance": false,
+  "copyLuisData": true,
+  "normalizeDiacritics": true,
+  "services": [
+    {
+      "intentName": "ProdRecommend",
+      "appId": "a2930e72-c447-491a-b468-e081cc4761a5",
+      "authoringKey": "befab8df30194b6c941ced7cda5a1f3e",
+      "version": "0.2",
+      "region": "westus",
+      "type": "luis",
+      "name": "importTest",
+      "id": "1"
+    },
+    {
+      "intentName": "ProdInfo",
+      "includePrompts": true,
+      "kbId": "3da6520f-6eeb-424f-b654-0a6766b680cc",
+      "subscriptionKey": "5d200df19eab4aebb5af4f9c771b1062",
+      "type": "qna",
+      "name": "kakaoTest",
+      "id": "2"
+    }
+  ],
+  "serviceIds": [
+    "1",
+    "2"
+  ],
+  "appId": "341c8b84-f3ac-4786-a0cf-5a8412296752",
+  "authoringKey": "befab8df30194b6c941ced7cda5a1f3e",
+  "version": "Dispatch",
+  "region": "westus",
+  "type": "dispatch",
+  "name": "testDis"
+}

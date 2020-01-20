@@ -1,0 +1,32 @@
+{
+  "luis_schema_version": "4.0.0",
+  "intents": [
+    {
+      "name": "ProdRecommend"
+    },
+    {
+      "name": "ProdInfo"
+    }
+  ],
+  "entities": [],
+  "composites": [],
+  "closedLists": [],
+  "prebuiltEntities": [],
+  "utterances": [],
+  "versionId": "Dispatch",
+  "name": "testDis",
+  "desc": "Dispatch model for testDis",
+  "culture": "ko-kr",
+  "tokenizerVersion": "1.0.0",
+  "patternAnyEntities": [],
+  "regex_entities": [],
+  "model_features": [],
+  "regex_features": [],
+  "patterns": [],
+  "settings": [
+    {
+      "name": "NormalizeDiacritics",
+      "value": "true"
+    }
+  ]
+}
