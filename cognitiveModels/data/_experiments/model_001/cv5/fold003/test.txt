@@ -1,0 +1,5 @@
+Label	Weight	Text
+ProdInfo	1	대출철회권
+ProdInfo	1	대출한도
+ProdRecommend	1	한도가 높은 대출 추천해줘
+ProdRecommend	1	신용대출 신청하고싶어

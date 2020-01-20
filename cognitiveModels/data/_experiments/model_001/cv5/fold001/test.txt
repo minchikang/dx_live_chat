@@ -1,0 +1,5 @@
+Label	Weight	Text
+ProdInfo	1	신청대상자
+ProdInfo	1	대출금리
+ProdRecommend	1	금리가 높은 적금 추천해줘
+ProdRecommend	1	금리인하 관련해서 알려줘

@@ -1,0 +1,5 @@
+Label	Weight	Text
+ProdInfo	1	대출철회권
+ProdInfo	1	대출한도
+ProdRecommend	1	테스트 발화입니다
+ProdRecommend	1	비상금대출 상환하는 법 알고싶어
