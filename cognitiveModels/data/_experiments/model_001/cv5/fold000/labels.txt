@@ -1,3 +1,0 @@
-Label	LabelName	Samples
-0	ProdInfo	8
-1	ProdRecommend	12

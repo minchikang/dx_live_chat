@@ -1,5 +1,0 @@
-Label	Weight	Text
-ProdInfo	1	신청방법
-ProdInfo	1	상환방식
-ProdRecommend	1	비상금대출 자동이체 변경하고싶어
-ProdRecommend	1	테스트 입니다
