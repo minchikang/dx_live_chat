@@ -1,0 +1,39 @@
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.0",
+  "body": [
+    {
+      "type": "TextBlock",
+      "spacing": "medium",
+      "size": "default",
+      "weight": "bolder",
+      "text": "안녕하세요 DX Live Chat 입니다. ",
+      "wrap": true,
+      "maxLines": 0
+    },
+    {
+      "type": "TextBlock",
+      "size": "default",
+      "isSubtle": "true",
+      "text": "궁금한 내용을 입력해보세요! 아래 메뉴를 눌러 상담챗봇을 쉽게 이용할 수 있어요.!",
+      "wrap": true,
+      "maxLines": 0
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.Submit",
+      "title": "대출"
+    },
+    {
+      "type": "Action.Submit",
+      "title": "적금"
+      
+    },
+    {
+      "type": "Action.Submit",
+      "title": "예금"
+    }
+  ]
+}

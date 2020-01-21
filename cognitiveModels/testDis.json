@@ -14,22 +14,12 @@
   "prebuiltEntities": [],
   "utterances": [
     {
-      "text": "신청방법",
+      "text": "대출한도",
       "intent": "ProdInfo",
       "entities": []
     },
     {
-      "text": "상환방식",
-      "intent": "ProdInfo",
-      "entities": []
-    },
-    {
-      "text": "신청대상자",
-      "intent": "ProdInfo",
-      "entities": []
-    },
-    {
-      "text": "대출금리",
+      "text": "비상금대출 상품안내",
       "intent": "ProdInfo",
       "entities": []
     },
@@ -39,7 +29,32 @@
       "entities": []
     },
     {
-      "text": "대출기간",
+      "text": "자동이체 변경",
+      "intent": "ProdInfo",
+      "entities": []
+    },
+    {
+      "text": "이자조회/납입방법",
+      "intent": "ProdInfo",
+      "entities": []
+    },
+    {
+      "text": "비상금대출 대출상환",
+      "intent": "ProdInfo",
+      "entities": []
+    },
+    {
+      "text": "사잇돌대출 상품안내",
+      "intent": "ProdInfo",
+      "entities": []
+    },
+    {
+      "text": "대출금리",
+      "intent": "ProdInfo",
+      "entities": []
+    },
+    {
+      "text": "신용대출",
       "intent": "ProdInfo",
       "entities": []
     },
@@ -49,7 +64,112 @@
       "entities": []
     },
     {
-      "text": "대출한도",
+      "text": "중신용대출",
+      "intent": "ProdInfo",
+      "entities": []
+    },
+    {
+      "text": "비상금대출 대출관리",
+      "intent": "ProdInfo",
+      "entities": []
+    },
+    {
+      "text": "추가대출",
+      "intent": "ProdInfo",
+      "entities": []
+    },
+    {
+      "text": "신청방법",
+      "intent": "ProdInfo",
+      "entities": []
+    },
+    {
+      "text": "금리인하요구권",
+      "intent": "ProdInfo",
+      "entities": []
+    },
+    {
+      "text": "대출기간",
+      "intent": "ProdInfo",
+      "entities": []
+    },
+    {
+      "text": "대출이자납부",
+      "intent": "ProdInfo",
+      "entities": []
+    },
+    {
+      "text": "개인사업자대출",
+      "intent": "ProdInfo",
+      "entities": []
+    },
+    {
+      "text": "비상금대출 대출이자납부",
+      "intent": "ProdInfo",
+      "entities": []
+    },
+    {
+      "text": "상환방식",
+      "intent": "ProdInfo",
+      "entities": []
+    },
+    {
+      "text": "연체/미납",
+      "intent": "ProdInfo",
+      "entities": []
+    },
+    {
+      "text": "신용대출/중신용대출/사잇돌대출",
+      "intent": "ProdInfo",
+      "entities": []
+    },
+    {
+      "text": "전월세보증금대출",
+      "intent": "ProdInfo",
+      "entities": []
+    },
+    {
+      "text": "신용대출/중신용대출/사잇돌대출 상품안내",
+      "intent": "ProdInfo",
+      "entities": []
+    },
+    {
+      "text": "대출",
+      "intent": "ProdInfo",
+      "entities": []
+    },
+    {
+      "text": "사잇돌대출",
+      "intent": "ProdInfo",
+      "entities": []
+    },
+    {
+      "text": "신용대출 상품안내",
+      "intent": "ProdInfo",
+      "entities": []
+    },
+    {
+      "text": "마이너스통장대출",
+      "intent": "ProdInfo",
+      "entities": []
+    },
+    {
+      "text": "비상금대출 신청방법",
+      "intent": "ProdInfo",
+      "entities": []
+    },
+    {
+      "text": "만기연장",
+      "intent": "ProdInfo",
+      "entities": []
+    },
+    {
+      "text": "중도상환/해지",
+      "intent": "ProdInfo",
+      "entities": []
+    },
+    {
+      "text": "중신용대출 상품안내",
       "intent": "ProdInfo",
       "entities": []
     },
@@ -127,6 +247,10 @@
   "settings": [
     {
       "name": "NormalizeDiacritics",
+      "value": "true"
+    },
+    {
+      "name": "UseAllTrainingData",
       "value": "true"
     }
   ]

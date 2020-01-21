@@ -27,6 +27,10 @@
     {
       "name": "NormalizeDiacritics",
       "value": "true"
+    },
+    {
+      "name": "UseAllTrainingData",
+      "value": "true"
     }
   ]
 }

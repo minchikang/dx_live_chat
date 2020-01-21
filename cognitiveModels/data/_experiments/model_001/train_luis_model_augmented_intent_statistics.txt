@@ -1,4 +1,4 @@
 No	Intent	Utterance Count	Utterance Average Length	Utterance Maximum Length	Utterance Minimum Length	Utterance Length StdDev
-0	ProdInfo	8	4.375	5	4	0.51755
+0	ProdInfo	32	7.375	21	2	3.93291
 1	ProdRecommend	12	13.91667	19	7	3.57919
- 	__ALL__	20	10.1	19	4	5.52411
+ 	__ALL__	44	9.15909	21	2	4.80766

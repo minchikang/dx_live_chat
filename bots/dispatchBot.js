@@ -1,9 +1,10 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+const { CardFactory } = require('botbuilder-core');
 const { ActivityHandler } = require('botbuilder');
 const { LuisRecognizer, QnAMaker } = require('botbuilder-ai');
-
+const WelcomeCard = require('../resources/welcomeCard.json');
 class DispatchBot extends ActivityHandler {
     constructor() {
         super();
@@ -29,7 +30,7 @@ class DispatchBot extends ActivityHandler {
         this.qnaMaker = qnaMaker;
 
         this.onMessage(async (context, next) => {
-            console.log('Processing Message Activity.');
+            console.log('dispatchRecognizer');
 
             // First, we use the dispatch model to determine which cognitive service (LUIS or QnA) to use.
             const recognizerResult = await dispatchRecognizer.recognize(context);
@@ -44,12 +45,14 @@ class DispatchBot extends ActivityHandler {
         });
 
         this.onMembersAdded(async (context, next) => {
-            const welcomeText = 'Type a greeting or a question about the weather to get started.';
+            const welcomeText = '간단한 문장 혹은 키워드를 입력해주세요!';
             const membersAdded = context.activity.membersAdded;
+            const welcomeCard = CardFactory.adaptiveCard(WelcomeCard);
 
             for (const member of membersAdded) {
                 if (member.id !== context.activity.recipient.id) {
-                    await context.sendActivity(`Welcome to Dispatch bot ${ member.name }. ${ welcomeText }`);
+                    await context.sendActivity({ attachments: [welcomeCard] });
+                    await context.sendActivity(`${ member.name }님  ${ welcomeText }`);
                 }
             }
 

@@ -1,5 +1,9 @@
 Label	Weight	Text
-ProdInfo	1	대출철회권
-ProdInfo	1	대출한도
+ProdInfo	1	대출
+ProdInfo	1	사잇돌대출
+ProdInfo	1	신용대출 상품안내
+ProdInfo	1	마이너스통장대출
+ProdInfo	1	비상금대출 신청방법
+ProdInfo	1	만기연장
 ProdRecommend	1	테스트 발화입니다
 ProdRecommend	1	비상금대출 상환하는 법 알고싶어

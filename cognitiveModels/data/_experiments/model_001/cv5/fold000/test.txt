@@ -1,5 +1,9 @@
 Label	Weight	Text
-ProdInfo	1	신청방법
-ProdInfo	1	상환방식
+ProdInfo	1	대출한도
+ProdInfo	1	비상금대출 상품안내
+ProdInfo	1	비상금대출
+ProdInfo	1	자동이체 변경
+ProdInfo	1	이자조회/납입방법
+ProdInfo	1	비상금대출 대출상환
 ProdRecommend	1	비상금대출 자동이체 변경하고싶어
 ProdRecommend	1	테스트 입니다

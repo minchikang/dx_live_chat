@@ -1,7 +1,7 @@
 {
   "authoringRegion": "westus",
   "hierarchical": true,
-  "useAllTrainingData": false,
+  "useAllTrainingData": true,
   "dontReviseUtterance": false,
   "copyLuisData": true,
   "normalizeDiacritics": true,

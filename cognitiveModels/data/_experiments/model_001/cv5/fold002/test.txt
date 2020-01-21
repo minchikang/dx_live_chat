@@ -1,5 +1,9 @@
 Label	Weight	Text
-ProdInfo	1	비상금대출
+ProdInfo	1	추가대출
+ProdInfo	1	신청방법
+ProdInfo	1	금리인하요구권
 ProdInfo	1	대출기간
+ProdInfo	1	대출이자납부
+ProdInfo	1	개인사업자대출
 ProdRecommend	1	사잇돌대출 만기연장 신청하고싶어
 ProdRecommend	1	26주 적금 금리 궁금해

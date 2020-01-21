@@ -1,10 +1,30 @@
 Label	Weight	Text
-ProdInfo	1	신청방법
-ProdInfo	1	상환방식
-ProdInfo	1	신청대상자
-ProdInfo	1	대출금리
-ProdInfo	1	대출철회권
 ProdInfo	1	대출한도
+ProdInfo	1	비상금대출 상품안내
+ProdInfo	1	비상금대출
+ProdInfo	1	자동이체 변경
+ProdInfo	1	이자조회/납입방법
+ProdInfo	1	비상금대출 대출상환
+ProdInfo	1	사잇돌대출 상품안내
+ProdInfo	1	대출금리
+ProdInfo	1	신용대출
+ProdInfo	1	대출철회권
+ProdInfo	1	중신용대출
+ProdInfo	1	비상금대출 대출관리
+ProdInfo	1	비상금대출 대출이자납부
+ProdInfo	1	상환방식
+ProdInfo	1	연체/미납
+ProdInfo	1	신용대출/중신용대출/사잇돌대출
+ProdInfo	1	전월세보증금대출
+ProdInfo	1	신용대출/중신용대출/사잇돌대출 상품안내
+ProdInfo	1	대출
+ProdInfo	1	사잇돌대출
+ProdInfo	1	신용대출 상품안내
+ProdInfo	1	마이너스통장대출
+ProdInfo	1	비상금대출 신청방법
+ProdInfo	1	만기연장
+ProdInfo	1	중도상환/해지
+ProdInfo	1	중신용대출 상품안내
 ProdRecommend	1	비상금대출 자동이체 변경하고싶어
 ProdRecommend	1	테스트 입니다
 ProdRecommend	1	금리가 높은 적금 추천해줘

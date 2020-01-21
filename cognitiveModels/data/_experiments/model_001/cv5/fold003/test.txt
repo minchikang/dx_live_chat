@@ -1,5 +1,9 @@
 Label	Weight	Text
-ProdInfo	1	대출철회권
-ProdInfo	1	대출한도
+ProdInfo	1	비상금대출 대출이자납부
+ProdInfo	1	상환방식
+ProdInfo	1	연체/미납
+ProdInfo	1	신용대출/중신용대출/사잇돌대출
+ProdInfo	1	전월세보증금대출
+ProdInfo	1	신용대출/중신용대출/사잇돌대출 상품안내
 ProdRecommend	1	한도가 높은 대출 추천해줘
 ProdRecommend	1	신용대출 신청하고싶어
