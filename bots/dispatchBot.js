@@ -30,20 +30,18 @@ class DispatchBot extends ActivityHandler {
         this.qnaMaker = qnaMaker;
 
         this.onMessage(async (context, next) => {
-            console.log('dispatchRecognizer');
-
-            // First, we use the dispatch model to determine which cognitive service (LUIS or QnA) to use.
+            // cognitive service (LUIS or QnA) 구분
             const recognizerResult = await dispatchRecognizer.recognize(context);
 
-            // Top intent tell us which cognitive service to use.
+            // Top intent 가 무엇인지 판별
             const intent = LuisRecognizer.topIntent(recognizerResult);
 
-            // Next, we call the dispatcher with the top intent.
+            //  top intent에 따른 디스패처 호출 
             await this.dispatchToTopIntentAsync(context, intent, recognizerResult);
 
             await next();
         });
-
+        //대화 시작시
         this.onMembersAdded(async (context, next) => {
             const welcomeText = '간단한 문장 혹은 키워드를 입력해주세요!';
             const membersAdded = context.activity.membersAdded;
@@ -60,86 +58,67 @@ class DispatchBot extends ActivityHandler {
             await next();
         });
     }
-
+    /* 
+    Top indent 구분 
+    상품추천 : prodRecomend -> LUIS 학습
+    상품문의 : ProdInfo
+    간단질의 : QnA bot -> 마인드맵을 통한 시나리오 작성
+    */
     async dispatchToTopIntentAsync(context, intent, recognizerResult) {
         switch (intent) {
         case 'ProdRecommend':
-            await this.processHomeAutomation(context, recognizerResult.luisResult);
+            await this.processprodRecommend(context, recognizerResult.luisResult);
             break;
         case 'qna':
-            await this.processWeather(context, recognizerResult.luisResult);
+            await this.processInfo(context, recognizerResult.luisResult);
             break;
         case 'ProdInfo':
             await this.processSampleQnA(context);
             break;
         default:
-            console.log(`Dispatch unrecognized intent: ${ intent }.`);
-            await context.sendActivity(`Dispatch unrecognized intent: ${ intent }.`);
+            await context.sendActivity(` ${ intent }에 대해서 잘 이해하지 못 했어요.`);
             break;
         }
     }
 
-    async processHomeAutomation(context, luisResult) {
+    async processprodRecommend(context, luisResult) {
         console.log('prodRecommend');
 
-        // Retrieve LUIS result for Process Automation.
+        // 상품추천
         const result = luisResult.connectedServiceResult;
         const intent = result.topScoringIntent.intent;
         console.log(result);
         const entities = result.entities[0].entity;
         console.log(entities);
-        // await context.sendActivity(`상품추천 top intent ${ intent }.`);
-        // await context.sendActivity(`상품추천 intents detected:  ${ luisResult.intents.map((intentObj) => intentObj.intent).join('\n\n') }.`);
         await context.sendActivity(`${ entities }에 대한 상품추천을 원하시나요?`);
-        console.log(luisResult.entities);
         if (luisResult.entities.length > 0) {
-            console.log(luisResult.entities);
-            await context.sendActivity(`HomeAutomation entities were found in the message: ${ luisResult.entities.map((entityObj) => entityObj.entity).join('\n\n') }.`);
+            await context.sendActivity(`${ luisResult.entities.map((entityObj) => entityObj.entity).join('\n\n') }.`);
         }
         console.log(result.entities[0].entity);
         if(intent == '안내' && result.entities.length > 0 ){
-            console.log('안내~~~~~');
-            console.log('결과'+ result);
             const entity = result.entities[0].role;
-            console.log('entities:' + entity);
-
-            // await this.processSampleQnA(entity)
             await this.processSampleQnA(context, entity);
         }
     }
-
-    async processWeather(context, luisResult) {
-        console.log('prodInfo');
-
-        // Retrieve LUIS results for Weather.
+    //상품 안내
+    async processInfo(context, luisResult) {
         const result = luisResult.connectedServiceResult;
         const topIntent = result.topScoringIntent.intent;
 
-        await context.sendActivity(`상품안내 top intent ${ topIntent }.`);
-        await context.sendActivity(`상품안내 intents detected:  ${ luisResult.intents.map((intentObj) => intentObj.intent).join('\n\n') }.`);
+        await context.sendActivity(`상품안내에서 ${ topIntent } 관련을 찾으시는게 맞을까요?`);
+        // await context.sendActivity(` ${ luisResult.intents.map((intentObj) => intentObj.intent).join('\n\n') }.`);
 
         if (luisResult.entities.length > 0) {
-            await context.sendActivity(`ProcessWeather entities were found in the message: ${ luisResult.entities.map((entityObj) => entityObj.entity).join('\n\n') }.`);
+            await context.sendActivity(`안내해드릴게요. ${ luisResult.entities.map((entityObj) => entityObj.entity).join('\n\n') }.`);
         }
     }
-
+    // QnA bot
     async processSampleQnA(context) {
-        console.log('========prodInfo==========');
-        console.log(context);
-        console.log('========위에context');
-        // context._turnState.push(entity);
-        console.log(context);
         const results = await this.qnaMaker.getAnswers(context);
-        console.log(results[0]);
-        console.log('===== resluts [0] =======');
-        console.log(results.length);
-
         if (results.length > 0) {
-            console.log("==========");
             await context.sendActivity(`${ results[0].answer }`);
         } else {
-            console.log("-------??")
-            // await context.sendActivity('Sorry, could not find an answer in the Q and A system.');
+            await context.sendActivity('죄송합니다. 더욱 배우고 있는 중 이에요.');
         }
     }
 }
